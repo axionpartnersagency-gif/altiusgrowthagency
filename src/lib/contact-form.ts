@@ -23,7 +23,7 @@ export const emptyContactForm: ContactFormData = {
 };
 
 export const SERVICE_OPTIONS = [
-  "Información sobre el Sistema Axion",
+  "Información sobre el Sistema AltiusGrowth",
   "Solicitar una demo",
   "Dudas sobre el precio o el plan",
   "Otro",

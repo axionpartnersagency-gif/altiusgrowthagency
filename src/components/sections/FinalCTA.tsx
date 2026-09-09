@@ -6,15 +6,19 @@ import { CTA_PRIMARY, siteConfig } from "@/lib/site-config";
 
 export default function FinalCTA() {
   return (
-    <section id="contacto" className="relative overflow-hidden bg-accent py-24 sm:py-28">
+    <section id="contacto" className="relative overflow-hidden bg-[linear-gradient(160deg,var(--color-accent),var(--color-accent-dark))] py-24 sm:py-32">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgba(255,255,255,0.16),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgba(255,255,255,0.18),transparent)]"
+      />
+      <div
+        aria-hidden
+        className="bg-grid pointer-events-none absolute inset-0 opacity-40"
       />
       <Container className="relative flex flex-col items-center gap-8 text-center">
         <Reveal>
           <h2 className="text-balance max-w-3xl font-display text-3xl font-bold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[2.6rem]">
-            Mientras tú haces el trabajo, Axion se encarga de que no se te
+            Mientras tú haces el trabajo, AltiusGrowth se encarga de que no se te
             escapen oportunidades.
           </h2>
         </Reveal>
@@ -22,14 +26,14 @@ export default function FinalCTA() {
         <Reveal delay={100}>
           <p className="max-w-xl text-balance text-lg text-white/85">
             Cuéntanos cómo trabajas hoy y te explicamos, sin compromiso, cómo
-            quedaría tu sistema Axion.
+            quedaría tu sistema AltiusGrowth.
           </p>
         </Reveal>
 
         <Reveal delay={180} className="flex flex-col items-center gap-4 sm:flex-row">
           <ContactTriggerButton
             size="lg"
-            className="bg-ink shadow-[0_8px_20px_-6px_rgba(0,0,0,0.4)] hover:bg-black hover:shadow-[0_10px_24px_-6px_rgba(0,0,0,0.5)]"
+            className="bg-surface shadow-[0_8px_20px_-6px_rgba(0,0,0,0.4)] hover:bg-black hover:shadow-[0_10px_24px_-6px_rgba(0,0,0,0.5)]"
           >
             {CTA_PRIMARY}
             <ArrowRight className="h-4 w-4" />
@@ -42,7 +46,7 @@ export default function FinalCTA() {
               href={siteConfig.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:text-white"
+              className="-my-2 inline-flex items-center gap-1.5 py-2 hover:text-white"
             >
               <MessageCircle className="h-4 w-4" />
               WhatsApp
@@ -50,7 +54,7 @@ export default function FinalCTA() {
             <span className="hidden h-1 w-1 rounded-full bg-white/40 sm:inline-block" />
             <a
               href={siteConfig.emailHref}
-              className="inline-flex items-center gap-1.5 hover:text-white"
+              className="-my-2 inline-flex items-center gap-1.5 py-2 hover:text-white"
             >
               <Mail className="h-4 w-4" />
               {siteConfig.email}

@@ -23,7 +23,7 @@ const points = [
 
 export default function TrustStrip() {
   return (
-    <section className="border-y border-ink/10 bg-paper py-6">
+    <section className="border-y border-white/[0.07] bg-mist/40 py-7">
       <Container>
         <Reveal>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-4 lg:grid-cols-4 lg:gap-y-0">
@@ -32,7 +32,7 @@ export default function TrustStrip() {
                 key={point.text}
                 className="flex items-center gap-2.5 text-sm text-ink/60"
               >
-                <point.icon className="h-4 w-4 shrink-0 text-accent" strokeWidth={1.75} />
+                <point.icon className="h-4 w-4 shrink-0 text-accent-light" strokeWidth={1.75} />
                 {point.text}
               </li>
             ))}

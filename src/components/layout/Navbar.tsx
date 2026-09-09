@@ -29,21 +29,21 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-ink/10 bg-paper/85 backdrop-blur-md"
+          ? "border-b border-white/[0.08] bg-paper/80 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <Container className="flex h-[4.5rem] items-center justify-between">
-        <a href="#top" className="shrink-0">
+      <Container className="flex h-[4.75rem] items-center justify-between">
+        <a href="#top" className="shrink-0 rounded-xl px-3 py-1.5">
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-ink/70 transition-colors hover:text-ink"
+              className="rounded-md px-2 py-2.5 text-sm font-medium text-ink/65 transition-colors hover:text-ink"
             >
               {item.label}
             </a>
@@ -59,7 +59,7 @@ export default function Navbar() {
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="grid h-10 w-10 place-items-center rounded-full text-ink lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-full text-ink lg:hidden"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -67,7 +67,8 @@ export default function Navbar() {
 
       {/* Mobile menu panel */}
       <div
-        className={`grid overflow-hidden border-b border-ink/10 bg-paper transition-[grid-template-rows] duration-300 ease-out lg:hidden ${
+        inert={!open}
+        className={`grid overflow-hidden border-b border-white/[0.08] bg-paper transition-[grid-template-rows] duration-300 ease-out lg:hidden ${
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >
@@ -78,7 +79,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-ink/80 transition-colors hover:bg-mist hover:text-ink"
+                className="rounded-lg px-3 py-3 text-base font-medium text-ink/80 transition-colors hover:bg-white/[0.06] hover:text-ink"
               >
                 {item.label}
               </a>

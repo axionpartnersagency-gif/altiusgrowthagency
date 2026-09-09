@@ -5,11 +5,13 @@ import { nav, siteConfig } from "@/lib/site-config";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-mist">
-      <Container className="flex flex-col gap-10 py-14">
-        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
+    <footer className="border-t border-white/[0.08] bg-mist">
+      <Container className="flex flex-col gap-10 py-16">
+        <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
           <div className="flex max-w-xs flex-col gap-4">
-            <Logo />
+            <div className="w-fit rounded-xl px-3 py-1.5">
+              <Logo />
+            </div>
             <p className="text-sm leading-relaxed text-ink/55">
               Webs con IA para fontaneros y electricistas. Diseñamos el
               sistema que trabaja mientras tú estás en obra.
@@ -25,7 +27,7 @@ export default function Footer() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-ink/65 transition-colors hover:text-ink"
+                  className="-my-1.5 py-1.5 text-sm text-ink/65 transition-colors hover:text-ink"
                 >
                   {item.label}
                 </a>
@@ -38,7 +40,7 @@ export default function Footer() {
               </span>
               <a
                 href={siteConfig.emailHref}
-                className="text-sm text-ink/65 transition-colors hover:text-ink"
+                className="-my-1.5 py-1.5 text-sm text-ink/65 transition-colors hover:text-ink"
               >
                 {siteConfig.email}
               </a>
@@ -46,7 +48,7 @@ export default function Footer() {
                 href={siteConfig.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-ink/65 transition-colors hover:text-ink"
+                className="-my-1.5 py-1.5 text-sm text-ink/65 transition-colors hover:text-ink"
               >
                 WhatsApp
               </a>
@@ -54,7 +56,7 @@ export default function Footer() {
                 href={siteConfig.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-ink/65 transition-colors hover:text-ink"
+                className="-my-1.5 py-1.5 text-sm text-ink/65 transition-colors hover:text-ink"
               >
                 Instagram
               </a>
@@ -69,13 +71,13 @@ export default function Footer() {
               </span>
               <Link
                 href="/aviso-legal"
-                className="text-sm text-ink/65 transition-colors hover:text-ink"
+                className="-my-1.5 py-1.5 text-sm text-ink/65 transition-colors hover:text-ink"
               >
                 Aviso legal
               </Link>
               <Link
                 href="/politica-privacidad"
-                className="text-sm text-ink/65 transition-colors hover:text-ink"
+                className="-my-1.5 py-1.5 text-sm text-ink/65 transition-colors hover:text-ink"
               >
                 Política de privacidad
               </Link>
@@ -83,8 +85,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2 border-t border-ink/10 pt-6 text-xs text-ink/45 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Axion. Todos los derechos reservados.</span>
+        <div className="flex flex-col gap-2 border-t border-white/[0.08] pt-6 text-xs text-ink/45 sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} AltiusGrowth. Todos los derechos reservados.</span>
           <span>Hecho para negocios de fontanería y electricidad.</span>
         </div>
       </Container>

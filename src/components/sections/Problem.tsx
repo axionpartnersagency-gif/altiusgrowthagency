@@ -24,7 +24,7 @@ const scenarios = [
 
 export default function Problem() {
   return (
-    <section className="bg-ink py-24 sm:py-28">
+    <section className="bg-paper py-24 sm:py-32">
       <Container className="flex flex-col gap-14">
         <SectionHeading
           tone="light"
@@ -33,14 +33,14 @@ export default function Problem() {
           description="Cada llamada perdida o mensaje sin responder es una oportunidad que se va con la competencia."
         />
 
-        <div className="grid gap-px overflow-hidden rounded-2xl bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {scenarios.map((item, i) => (
-            <Reveal key={item.text} delay={i * 90}>
-              <div className="flex h-full flex-col gap-4 bg-ink p-6">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10">
-                  <item.icon className="h-5 w-5 text-white/80" strokeWidth={1.75} />
+            <Reveal key={item.text} delay={i * 90} className="h-full">
+              <div className="group flex h-full flex-col gap-4 rounded-2xl border border-white/[0.07] bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_24px_48px_-20px_rgba(79,109,245,0.35),0_0_0_1px_rgba(79,109,245,0.12)] sm:p-7">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-white/[0.06] transition-colors duration-300 group-hover:bg-accent/20">
+                  <item.icon className="h-5 w-5 text-white/80 transition-colors duration-300 group-hover:text-accent-light" strokeWidth={1.75} />
                 </span>
-                <p className="text-[15px] leading-relaxed text-white/70">
+                <p className="text-[15px] leading-relaxed text-white/65">
                   {item.text}
                 </p>
               </div>
@@ -49,9 +49,9 @@ export default function Problem() {
         </div>
 
         <Reveal delay={360}>
-          <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-6 py-4">
+          <div className="flex items-center gap-3 rounded-full border border-accent/20 bg-accent/[0.06] px-6 py-4">
             <ArrowRight className="h-4 w-4 shrink-0 text-accent-light" />
-            <p className="text-sm text-white/70 sm:text-base">
+            <p className="text-sm text-white/75 sm:text-base">
               Resultado: cada semana pierdes solicitudes que nunca llegas a
               ver, sin ni siquiera saber que existieron.
             </p>

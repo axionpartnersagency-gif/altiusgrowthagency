@@ -41,7 +41,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-paper py-24 sm:py-28">
+    <section id="faq" className="bg-paper py-24 sm:py-32">
       <Container className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <SectionHeading
           eyebrow="Preguntas frecuentes"
@@ -49,7 +49,7 @@ export default function FAQ() {
           description="Si tienes otra duda, escríbenos y te respondemos directamente."
         />
 
-        <div className="flex flex-col divide-y divide-ink/10 border-t border-ink/10">
+        <div className="flex flex-col divide-y divide-white/[0.08] border-t border-white/[0.08]">
           {faqs.map((item, i) => {
             const isOpen = open === i;
             return (
@@ -59,14 +59,14 @@ export default function FAQ() {
                     type="button"
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                    className="flex w-full items-center justify-between gap-4 rounded-lg px-3 py-5 -mx-3 text-left transition-colors duration-200 hover:bg-white/[0.03] hover:text-accent-light"
                   >
                     <span className="font-display text-[15px] font-semibold text-ink sm:text-base">
                       {item.q}
                     </span>
                     <ChevronDown
                       className={`h-4 w-4 shrink-0 text-ink/40 transition-transform duration-300 ${
-                        isOpen ? "rotate-180 text-accent" : ""
+                        isOpen ? "rotate-180 text-accent-light" : ""
                       }`}
                     />
                   </button>

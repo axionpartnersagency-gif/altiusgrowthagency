@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Aviso legal",
-  description: "Aviso legal de Axion.",
+  description: "Aviso legal de AltiusGrowth.",
   alternates: {
     canonical: "/aviso-legal",
   },
@@ -19,7 +19,7 @@ export default function AvisoLegalPage() {
         siguientes datos:
       </p>
       <ul className="list-disc space-y-1 pl-5">
-        <li>Titular: [Razón social de Axion]</li>
+        <li>Titular: [Razón social de AltiusGrowth]</li>
         <li>NIF/CIF: [CIF pendiente de completar]</li>
         <li>Domicilio social: [Dirección fiscal pendiente de completar]</li>
         <li>
@@ -33,7 +33,7 @@ export default function AvisoLegalPage() {
 
       <h2>Objeto</h2>
       <p>
-        Este sitio web tiene como finalidad presentar los servicios de Axion:
+        Este sitio web tiene como finalidad presentar los servicios de AltiusGrowth:
         diseño y desarrollo de páginas web con chatbot de inteligencia
         artificial para empresas de fontanería y electricidad.
       </p>
@@ -49,14 +49,14 @@ export default function AvisoLegalPage() {
       <h2>Propiedad intelectual</h2>
       <p>
         Todos los contenidos del sitio (textos, imágenes, marca y diseño) son
-        propiedad de Axion o de sus licenciantes, salvo indicación contraria,
+        propiedad de AltiusGrowth o de sus licenciantes, salvo indicación contraria,
         y están protegidos por la normativa de propiedad intelectual e
         industrial.
       </p>
 
       <h2>Limitación de responsabilidad</h2>
       <p>
-        Axion no se hace responsable de los daños derivados del uso
+        AltiusGrowth no se hace responsable de los daños derivados del uso
         incorrecto del sitio web ni garantiza la disponibilidad continua del
         mismo, sin perjuicio de las medidas técnicas que se adopten para
         evitar interrupciones.

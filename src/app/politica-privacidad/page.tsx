@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Política de privacidad",
-  description: "Política de privacidad de Axion.",
+  description: "Política de privacidad de AltiusGrowth.",
   alternates: {
     canonical: "/politica-privacidad",
   },
@@ -15,7 +15,7 @@ export default function PoliticaPrivacidadPage() {
     <LegalPage title="Política de privacidad" updated="22 de agosto de 2026">
       <h2>Responsable del tratamiento</h2>
       <p>
-        [Razón social de Axion], con NIF [pendiente], es responsable del
+        [Razón social de AltiusGrowth], con NIF [pendiente], es responsable del
         tratamiento de los datos personales facilitados a través de este
         sitio web y del chatbot de contacto.
       </p>
@@ -30,7 +30,7 @@ export default function PoliticaPrivacidadPage() {
       <h2>Finalidad</h2>
       <p>
         Los datos se utilizan para responder a tus consultas, gestionar
-        solicitudes de servicio o de información sobre el Sistema Axion, y
+        solicitudes de servicio o de información sobre el Sistema AltiusGrowth, y
         realizar el seguimiento comercial correspondiente.
       </p>
 

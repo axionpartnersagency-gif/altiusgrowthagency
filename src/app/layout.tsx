@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Manrope } from "next/font/google";
+import { Bricolage_Grotesque, JetBrains_Mono, Manrope } from "next/font/google";
 import { siteConfig } from "@/lib/site-config";
 import { ContactModalProvider } from "@/components/contact/ContactModalContext";
 import "./globals.css";
@@ -16,14 +16,20 @@ const body = Manrope({
   weight: ["400", "500", "600", "700"],
 });
 
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Axion — Webs con IA para fontaneros y electricistas",
-    template: "%s · Axion",
+    default: "AltiusGrowth — Webs con IA para fontaneros y electricistas",
+    template: "%s · AltiusGrowth",
   },
   description:
-    "Axion crea páginas web profesionales con un chatbot de IA que atiende a tus clientes, responde sus dudas y te consigue más solicitudes de servicio, incluso mientras trabajas.",
+    "AltiusGrowth crea páginas web profesionales con un chatbot de IA que atiende a tus clientes, responde sus dudas y te consigue más solicitudes de servicio, incluso mientras trabajas.",
   keywords: [
     "web para fontaneros",
     "web para electricistas",
@@ -31,7 +37,7 @@ export const metadata: Metadata = {
     "captación de clientes fontanería",
     "agencia web fontanería y electricidad",
   ],
-  authors: [{ name: "Axion" }],
+  authors: [{ name: "AltiusGrowth" }],
   alternates: {
     canonical: "/",
   },
@@ -39,14 +45,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: siteConfig.url,
-    siteName: "Axion",
-    title: "Axion — Mientras tú trabajas, Axion atiende a tus clientes",
+    siteName: "AltiusGrowth",
+    title: "AltiusGrowth — Mientras tú trabajas, AltiusGrowth atiende a tus clientes",
     description:
       "Webs profesionales con chatbot de IA para fontaneros y electricistas. Más solicitudes de servicio, sin depender de estar siempre al teléfono.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Axion — Mientras tú trabajas, Axion atiende a tus clientes",
+    title: "AltiusGrowth — Mientras tú trabajas, AltiusGrowth atiende a tus clientes",
     description:
       "Webs profesionales con chatbot de IA para fontaneros y electricistas.",
   },
@@ -60,9 +66,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${display.variable} ${body.variable} scroll-smooth`}
+      className={`${display.variable} ${body.variable} ${mono.variable} overflow-x-hidden scroll-smooth`}
     >
-      <body className="min-h-full bg-paper font-body text-ink antialiased">
+      <body className="min-h-full overflow-x-hidden bg-paper font-body text-ink antialiased">
+        <div
+          aria-hidden
+          className="bg-grid pointer-events-none fixed inset-0 -z-50 h-full w-full"
+        />
+        <div
+          aria-hidden
+          className="animate-drift pointer-events-none fixed -top-40 left-1/2 -z-50 h-[560px] w-[min(900px,150vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(79,109,245,0.16),transparent_65%)]"
+        />
         <ContactModalProvider>{children}</ContactModalProvider>
       </body>
     </html>

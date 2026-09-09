@@ -13,11 +13,13 @@ import {
   type ContactFormErrors,
 } from "@/lib/contact-form";
 
+// text-base (16px), no menor: en iOS Safari un input con font-size < 16px hace
+// zoom automático de toda la página al enfocarlo.
 const fieldClass =
-  "w-full rounded-xl border bg-white px-4 py-2.5 text-[15px] text-ink placeholder:text-ink/35 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/40";
+  "w-full rounded-xl border bg-paper px-4 py-3 text-base text-ink placeholder:text-ink/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/40";
 
 function fieldBorder(hasError: boolean) {
-  return hasError ? "border-red-400 focus:border-red-400" : "border-ink/15 focus:border-accent";
+  return hasError ? "border-red-400 focus:border-red-400" : "border-white/10 focus:border-accent";
 }
 
 export default function ContactModal() {
@@ -94,7 +96,7 @@ export default function ContactModal() {
       <div
         onClick={close}
         aria-hidden="true"
-        className="absolute inset-0 bg-ink/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-paper/80 backdrop-blur-sm"
       />
 
       <div
@@ -103,7 +105,7 @@ export default function ContactModal() {
         aria-modal="true"
         aria-labelledby="contact-modal-title"
         tabIndex={-1}
-        className={`relative flex max-h-[90vh] w-full max-w-lg flex-col rounded-2xl bg-white shadow-[0_30px_60px_-20px_rgba(17,17,17,0.4)] transition-all duration-300 focus:outline-none ${
+        className={`relative flex max-h-[90vh] w-full max-w-lg flex-col rounded-2xl border border-white/10 bg-surface shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] transition-all duration-300 focus:outline-none ${
           isOpen ? "translate-y-0 scale-100" : "translate-y-3 scale-95"
         }`}
       >
@@ -111,7 +113,7 @@ export default function ContactModal() {
           type="button"
           onClick={close}
           aria-label="Cerrar"
-          className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full text-ink/50 transition-colors hover:bg-mist hover:text-ink"
+          className="absolute right-3 top-3 grid h-11 w-11 place-items-center rounded-full text-ink/50 transition-colors hover:bg-white/[0.06] hover:text-ink"
         >
           <X className="h-5 w-5" />
         </button>
@@ -161,7 +163,7 @@ export default function ContactModal() {
                     onChange={(e) => update("name", e.target.value)}
                     className={`${fieldClass} ${fieldBorder(!!errors.name)}`}
                   />
-                  {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
+                  {errors.name && <p className="mt-1 text-xs text-red-400">{errors.name}</p>}
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -177,7 +179,7 @@ export default function ContactModal() {
                       onChange={(e) => update("email", e.target.value)}
                       className={`${fieldClass} ${fieldBorder(!!errors.email)}`}
                     />
-                    {errors.email && <p className="mt-1 text-xs text-red-600">{errors.email}</p>}
+                    {errors.email && <p className="mt-1 text-xs text-red-400">{errors.email}</p>}
                   </div>
 
                   <div>
@@ -193,7 +195,7 @@ export default function ContactModal() {
                       onChange={(e) => update("phone", e.target.value)}
                       className={`${fieldClass} ${fieldBorder(!!errors.phone)}`}
                     />
-                    {errors.phone && <p className="mt-1 text-xs text-red-600">{errors.phone}</p>}
+                    {errors.phone && <p className="mt-1 text-xs text-red-400">{errors.phone}</p>}
                   </div>
                 </div>
 
@@ -230,7 +232,7 @@ export default function ContactModal() {
                       </option>
                     ))}
                   </select>
-                  {errors.service && <p className="mt-1 text-xs text-red-600">{errors.service}</p>}
+                  {errors.service && <p className="mt-1 text-xs text-red-400">{errors.service}</p>}
                 </div>
 
                 <div>
@@ -244,7 +246,7 @@ export default function ContactModal() {
                     onChange={(e) => update("message", e.target.value)}
                     className={`${fieldClass} ${fieldBorder(!!errors.message)} resize-none`}
                   />
-                  {errors.message && <p className="mt-1 text-xs text-red-600">{errors.message}</p>}
+                  {errors.message && <p className="mt-1 text-xs text-red-400">{errors.message}</p>}
                 </div>
 
                 <div>
@@ -255,7 +257,7 @@ export default function ContactModal() {
                     {(["email", "telefono"] as const).map((option) => (
                       <label
                         key={option}
-                        className="flex cursor-pointer items-center gap-2 text-[15px] text-ink/75"
+                        className="-my-2 flex cursor-pointer items-center gap-2 py-2 text-[15px] text-ink/75"
                       >
                         <input
                           type="radio"
@@ -270,12 +272,12 @@ export default function ContactModal() {
                     ))}
                   </div>
                   {errors.contactPreference && (
-                    <p className="mt-1 text-xs text-red-600">{errors.contactPreference}</p>
+                    <p className="mt-1 text-xs text-red-400">{errors.contactPreference}</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="flex cursor-pointer items-start gap-2.5 text-sm text-ink/70">
+                  <label className="-my-1.5 flex cursor-pointer items-start gap-2.5 py-1.5 text-sm text-ink/70">
                     <input
                       type="checkbox"
                       checked={data.consent}
@@ -285,11 +287,11 @@ export default function ContactModal() {
                     Acepto que mis datos sean utilizados para que puedan
                     ponerse en contacto conmigo en relación con mi solicitud.
                   </label>
-                  {errors.consent && <p className="mt-1 text-xs text-red-600">{errors.consent}</p>}
+                  {errors.consent && <p className="mt-1 text-xs text-red-400">{errors.consent}</p>}
                 </div>
 
                 {status === "error" && (
-                  <p className="rounded-xl bg-red-50 px-4 py-2.5 text-sm text-red-700">
+                  <p className="rounded-xl bg-red-500/10 px-4 py-2.5 text-sm text-red-300">
                     {submitError}
                   </p>
                 )}

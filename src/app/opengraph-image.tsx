@@ -5,7 +5,7 @@ import { join } from "node:path";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// El logo real de Axion (Propuesta 2) tiene texto en negro, pensado para
+// El logo real de AltiusGrowth (Propuesta 2) tiene texto en negro, pensado para
 // fondos claros. Se lee una sola vez a nivel de módulo (valor predecible,
 // no depende de la request) y se muestra sobre una placa clara para que
 // mantenga contraste dentro de la tarjeta oscura.
@@ -42,7 +42,7 @@ export default async function Image() {
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse (next/og) renderiza con Satori, no en el DOM: next/image no es válido aquí, <img> es el patrón oficial de Next.js */}
-          <img src={logoSrc} width={73} height={56} alt="Axion" />
+          <img src={logoSrc} width={56} height={56} alt="AltiusGrowth" />
         </div>
 
         <div
@@ -57,7 +57,7 @@ export default async function Image() {
             maxWidth: 900,
           }}
         >
-          Mientras tú trabajas, Axion atiende a tus clientes.
+          Mientras tú trabajas, AltiusGrowth atiende a tus clientes.
         </div>
 
         <div
