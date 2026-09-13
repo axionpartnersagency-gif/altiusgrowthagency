@@ -5,15 +5,13 @@ import {
   type ContactFormData,
 } from "@/lib/contact-form";
 
-// URL del webhook de n8n. El envío pasa por este endpoint (en vez de ir
-// directo navegador → n8n) porque los webhooks de n8n no devuelven
+// URL del webhook de Make. El envío pasa por este endpoint (en vez de ir
+// directo navegador → Make) porque los webhooks de Make no devuelven
 // cabeceras CORS por defecto: una petición directa desde el navegador es
-// bloqueada antes de llegar a n8n. Una petición servidor → servidor no
+// bloqueada antes de llegar a Make. Una petición servidor → servidor no
 // tiene esa restricción.
-// Configurada en axiom-landing/.env.local (variable N8N_CONTACT_WEBHOOK_URL).
-// En Vercel debe añadirse la misma variable en Project Settings →
-// Environment Variables para que funcione también en producción.
-const N8N_WEBHOOK_URL = process.env.N8N_CONTACT_WEBHOOK_URL;
+const MAKE_WEBHOOK_URL =
+  "https://hook.eu1.make.com/esaftixd2gjaievoeclb4jtio4jf9u9q";
 
 export async function POST(request: Request) {
   let body: Partial<ContactFormData>;
@@ -46,25 +44,20 @@ export async function POST(request: Request) {
     privacyAccepted: data.consent,
   };
 
-  if (!N8N_WEBHOOK_URL) {
-    console.log("[contact] N8N_CONTACT_WEBHOOK_URL no configurado todavía. Solicitud recibida:", payload);
-    return NextResponse.json({ ok: true });
-  }
-
   try {
-    const res = await fetch(N8N_WEBHOOK_URL, {
+    const res = await fetch(MAKE_WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
     if (!res.ok) {
-      throw new Error(`n8n respondió con estado ${res.status}`);
+      throw new Error(`Make respondió con estado ${res.status}`);
     }
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error("[contact] Error al reenviar la solicitud a n8n:", error);
+    console.error("[contact] Error al reenviar la solicitud a Make:", error);
     return NextResponse.json(
       { ok: false, error: "No se pudo enviar la solicitud." },
       { status: 502 },

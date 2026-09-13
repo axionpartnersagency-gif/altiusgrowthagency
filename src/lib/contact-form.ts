@@ -79,10 +79,10 @@ export type SubmitResult = { ok: true } | { ok: false; error: string };
 
 /**
  * Envía la solicitud a nuestro propio endpoint (/api/contact), que la
- * reenvía al webhook de n8n desde el servidor. Un envío directo
- * navegador → n8n no es viable: los webhooks de n8n no devuelven
+ * reenvía al webhook de Make desde el servidor. Un envío directo
+ * navegador → Make no es viable: los webhooks de Make no devuelven
  * cabeceras CORS, así que el navegador bloquea la petición antes de que
- * llegue a n8n.
+ * llegue a Make.
  */
 export async function submitContactForm(
   data: ContactFormData,
