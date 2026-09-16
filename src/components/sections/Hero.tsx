@@ -120,7 +120,7 @@ export default function Hero() {
               <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/[0.05]">
                 <ShieldCheck className="h-3.5 w-3.5 text-accent-light" strokeWidth={1.75} />
               </span>
-              Implementación 1.000 € · Mantenimiento 149 €/mes
+              Implementación 1.000 € · Mantenimiento 50 €/mes
             </p>
           </Reveal>
         </div>

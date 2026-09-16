@@ -64,7 +64,7 @@ export default function Pricing() {
                   <div className="flex flex-col gap-1 text-center sm:text-left">
                     <span className="text-sm text-white/50">Mantenimiento</span>
                     <span className="font-display text-4xl font-bold text-white">
-                      149 €<span className="text-xl font-semibold text-white/50">/mes</span>
+                      50 €<span className="text-xl font-semibold text-white/50">/mes</span>
                     </span>
                     <span className="text-xs text-white/40">
                       Alojamiento, soporte y supervisión

@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "¿El precio incluye el mantenimiento?",
-    a: "La implementación (1.000 €) cubre el diseño, desarrollo y puesta en marcha. La cuota de 149 €/mes cubre alojamiento, soporte y supervisión del sistema.",
+    a: "La implementación (1.000 €) cubre el diseño, desarrollo y puesta en marcha. La cuota de 50 €/mes cubre alojamiento, soporte y supervisión del sistema.",
   },
   {
     q: "¿Cuánto se tarda en tener la web funcionando?",
