@@ -25,19 +25,19 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Web para fontaneros y electricistas · AltiusGrowth",
+    default: "Web y atención 24/7 para fontaneros y electricistas · AltiusGrowth",
     template: "%s · AltiusGrowth",
   },
   description:
-    "Webs para fontaneros y electricistas que atienden a tus clientes 24/7 y recogen sus solicitudes mientras tú trabajas. Precio cerrado: 1.000 € + 50 €/mes.",
+    "Sistema de atención y captación para fontaneros y electricistas: tu web atiende a tus clientes 24/7 y recoge sus solicitudes mientras tú trabajas. 1.000 € + 50 €/mes.",
   keywords: [
     "web para fontaneros",
     "web para electricistas",
-    "página web fontanería",
-    "página web electricista autónomo",
-    "conseguir clientes fontanería",
+    "captación de clientes para fontaneros",
+    "automatización para fontaneros",
+    "atención de clientes para electricistas",
     "atender llamadas mientras trabajo",
-    "asistente 24/7 para fontaneros",
+    "asistente 24/7 para fontaneros y electricistas",
   ],
   authors: [{ name: "AltiusGrowth" }],
   alternates: {
@@ -48,15 +48,15 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: siteConfig.url,
     siteName: "AltiusGrowth",
-    title: "Deja de perder clientes mientras estás trabajando · AltiusGrowth",
+    title: "Mientras tú trabajas, AltiusGrowth atiende a tus clientes",
     description:
-      "Webs para fontaneros y electricistas que atienden a tus clientes a cualquier hora y te dejan la solicitud lista para cuando termines.",
+      "Sistema de atención y captación para fontaneros y electricistas. Recoge las solicitudes de tus clientes aunque tú no puedas responder.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deja de perder clientes mientras estás trabajando · AltiusGrowth",
+    title: "Mientras tú trabajas, AltiusGrowth atiende a tus clientes",
     description:
-      "Webs para fontaneros y electricistas que atienden a tus clientes a cualquier hora.",
+      "Sistema de atención y captación para fontaneros y electricistas.",
   },
   robots: {
     index: true,

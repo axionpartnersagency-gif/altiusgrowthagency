@@ -5,8 +5,10 @@ import Hero from "@/components/sections/Hero";
 import TrustStrip from "@/components/sections/TrustStrip";
 import Problem from "@/components/sections/Problem";
 import HowItWorks from "@/components/sections/HowItWorks";
+import Demo from "@/components/sections/Demo";
 import WhatsIncluded from "@/components/sections/WhatsIncluded";
 import Pricing from "@/components/sections/Pricing";
+import Onboarding from "@/components/sections/Onboarding";
 import SocialProof from "@/components/sections/SocialProof";
 import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -20,7 +22,7 @@ const jsonLd = {
   email: siteConfig.email,
   telephone: `+${siteConfig.whatsapp}`,
   description:
-    "Webs para fontaneros y electricistas con un asistente que atiende a los clientes a cualquier hora y recoge sus solicitudes.",
+    "Sistema de atención y captación para fontaneros y electricistas: web profesional con un asistente que atiende a los clientes a cualquier hora y recoge sus solicitudes.",
   areaServed: { "@type": "Country", name: "España" },
   sameAs: [siteConfig.instagram],
   makesOffer: {
@@ -47,8 +49,10 @@ export default function Home() {
         <TrustStrip />
         <Problem />
         <HowItWorks />
+        <Demo />
         <WhatsIncluded />
         <Pricing />
+        <Onboarding />
         <SocialProof />
         <FAQ />
         <FinalCTA />

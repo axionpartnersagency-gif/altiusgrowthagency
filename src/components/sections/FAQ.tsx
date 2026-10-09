@@ -13,6 +13,10 @@ const faqs = [
     a: "Sí, para eso está. El asistente atiende a quien entra en tu web a cualquier hora: cuando estás en una obra, conduciendo o fuera de horario. Tú revisas las solicitudes cuando terminas.",
   },
   {
+    q: "¿Me garantizáis más clientes?",
+    a: "No podemos garantizarte un número concreto de clientes. Lo que hacemos es ayudarte a aprovechar mejor las oportunidades que ya llegan a tu negocio, evitando que una persona interesada se quede sin respuesta cuando estás trabajando.",
+  },
+  {
     q: "¿Necesito saber de tecnología?",
     a: "No. Lo montamos y configuramos nosotros. Tú solo nos cuentas cómo trabajas.",
   },
@@ -26,7 +30,7 @@ const faqs = [
   },
   {
     q: "¿Puedo cambiar lo que responde el asistente?",
-    a: "Sí. Lo configuramos con las preguntas y respuestas de tu negocio, y lo ajustamos cuando lo necesites dentro del mantenimiento.",
+    a: "Sí. Lo configuramos con las preguntas y respuestas de tu negocio, y dentro del mantenimiento puedes pedirnos pequeños ajustes de esas respuestas.",
   },
   {
     q: "¿Qué tengo que aportar para empezar?",
@@ -34,7 +38,7 @@ const faqs = [
   },
   {
     q: "¿Qué incluye cada pago?",
-    a: "Los 1.000 € (pago único) cubren el diseño, el montaje y la puesta en marcha. Los 50 €/mes cubren alojamiento, soporte y supervisión del sistema.",
+    a: "Los 1.000 € (pago único) cubren la implementación completa: web, atención automática, recogida de solicitudes, agenda, WhatsApp, configuración y puesta en marcha. Los 50 €/mes cubren alojamiento, mantenimiento técnico, supervisión, soporte y pequeños ajustes.",
   },
   {
     q: "¿Cuánto se tarda en tenerlo funcionando?",

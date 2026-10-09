@@ -13,8 +13,8 @@ export default function Footer() {
               <Logo />
             </div>
             <p className="text-sm leading-relaxed text-ink/55">
-              Webs para fontaneros y electricistas que atienden a tus
-              clientes mientras tú estás en una obra.
+              Sistema de atención y captación para fontaneros y
+              electricistas. Atiende a tus clientes mientras tú trabajas.
             </p>
           </div>
 

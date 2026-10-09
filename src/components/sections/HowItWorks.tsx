@@ -8,8 +8,8 @@ import {
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
-import ContactTriggerButton from "@/components/contact/ContactTriggerButton";
-import { CTA_DEMO } from "@/lib/site-config";
+import Button from "@/components/ui/Button";
+
 
 const steps = [
   {
@@ -31,7 +31,7 @@ const steps = [
     icon: ClipboardList,
     title: "Deja sus datos",
     detail:
-      "Nombre, teléfono, dirección y qué le pasa. Lo justo para que sepas de qué va antes de llamar.",
+      "Nombre, teléfono, dirección y qué le pasa. Lo justo para que, cuando hables con el cliente, ya tengas el contexto necesario.",
   },
   {
     number: "04",
@@ -78,12 +78,12 @@ export default function HowItWorks() {
         </div>
 
         <Reveal className="flex flex-col items-center gap-3 text-center">
-          <ContactTriggerButton variant="ghost" size="lg" className="w-full sm:w-auto">
-            {CTA_DEMO}
+          <Button href="#demo" variant="ghost" size="lg" className="w-full sm:w-auto">
+            Pruébalo como si fueras un cliente
             <ArrowRight className="h-4 w-4" />
-          </ContactTriggerButton>
+          </Button>
           <p className="text-sm text-ink/55">
-            Te enseñamos el asistente en una demo, sin compromiso.
+            Son cinco respuestas, aquí mismo.
           </p>
         </Reveal>
       </Container>

@@ -1,7 +1,7 @@
 // Datos de contacto y enlaces reales de la agencia.
 export const siteConfig = {
   name: "AltiusGrowth",
-  tagline: "Deja de perder clientes mientras estás trabajando.",
+  tagline: "Mientras tú trabajas, AltiusGrowth atiende a tus clientes.",
   url: "https://altiusgrowth.es",
   email: "altiusgrowthagency@gmail.com",
   whatsapp: "34689593756",
@@ -17,6 +17,7 @@ export const siteConfig = {
 
 export const nav = [
   { label: "Cómo funciona", href: "#como-funciona" },
+  { label: "Demo", href: "#demo" },
   { label: "Qué incluye", href: "#que-incluye" },
   { label: "Precio", href: "#precio" },
   { label: "FAQ", href: "#faq" },
@@ -26,5 +27,4 @@ export const nav = [
 export const CTA_PRIMARY = "Quiero dejar de perder solicitudes";
 export const CTA_SECONDARY = "Ver cómo funciona";
 export const CTA_INFO = "Solicitar información";
-export const CTA_DEMO = "Quiero verlo funcionando";
 export const CTA_TALK = "Hablar con AltiusGrowth";

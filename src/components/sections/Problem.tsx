@@ -30,14 +30,14 @@ const scenarios = [
   },
 ];
 
-// La cadena de lo que pasa con una llamada sin contestar. Sin cifras: el
+// La escena de una llamada sin contestar. Sin cifras: el
 // argumento es el propio recorrido, que cualquier autónomo reconoce.
 const chain = [
-  "Una llamada que no puedes coger",
-  "El cliente sigue necesitando a alguien",
-  "No recibe respuesta",
-  "Llama al siguiente que encuentra",
-  "Ese trabajo lo hace otro",
+  "Estás debajo de un fregadero",
+  "Suena el teléfono",
+  "No puedes cogerlo",
+  "El cliente necesita una solución hoy",
+  "Llama al siguiente profesional",
 ];
 
 export default function Problem() {
@@ -69,7 +69,7 @@ export default function Problem() {
         <Reveal delay={200}>
           <div className="flex flex-col gap-8 rounded-3xl border border-white/[0.08] bg-mist p-6 sm:p-10">
             <h3 className="font-display text-xl font-semibold text-ink sm:text-2xl">
-              Lo que pasa con una sola llamada perdida
+              Te suena, ¿verdad?
             </h3>
 
             <ol className="flex flex-col items-stretch gap-2 lg:flex-row lg:items-center lg:gap-3">

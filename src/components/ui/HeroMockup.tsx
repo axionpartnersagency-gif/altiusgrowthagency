@@ -4,7 +4,7 @@ export default function HeroMockup() {
   return (
     <div
       role="img"
-      aria-label="Ejemplo: web de una fontanería con un asistente que atiende a un cliente con una fuga y le pide sus datos para darle cita"
+      aria-label="Ejemplo: web de una fontanería con un asistente que atiende a un cliente con una fuga y le pide los datos del servicio"
       className="relative mx-auto w-full max-w-md lg:max-w-none"
     >
       {/* Ambient glow behind the card */}
@@ -88,8 +88,7 @@ export default function HeroMockup() {
             Tengo una fuga en la cocina
           </div>
           <div className="max-w-[90%] rounded-xl rounded-tl-sm bg-white/10 px-3 py-2 text-[13px] leading-snug text-white/90">
-            Entendido. Dime tu código postal y te reservamos una visita hoy
-            mismo.
+            Entendido. ¿En qué localidad necesitas el servicio?
           </div>
         </div>
 

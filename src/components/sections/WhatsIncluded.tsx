@@ -12,81 +12,91 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 
+// Primero el beneficio (título), después la funcionalidad (etiqueta).
 const items = [
   {
-    icon: Globe,
-    title: "Web profesional",
-    detail: "Que dé confianza y deje claro qué haces y dónde trabajas.",
-  },
-  {
-    icon: Smartphone,
-    title: "Pensada para el móvil",
-    detail: "Tus clientes te buscan desde el móvil. Ahí se ve y funciona bien.",
-  },
-  {
-    icon: PenLine,
-    title: "Textos que piden la acción",
-    detail: "Escritos para que el visitante te pida presupuesto, no solo para que mire.",
-  },
-  {
     icon: Bot,
-    title: "Asistente 24/7",
-    detail: "Responde las preguntas de siempre a cualquier hora, también de noche.",
+    feature: "Asistente 24/7",
+    title: "Atiende las primeras preguntas aunque estés trabajando.",
   },
   {
     icon: UserCheck,
-    title: "Datos del cliente, listos",
-    detail: "Nombre, teléfono y qué necesita. Llamas sabiendo de qué va.",
+    feature: "Recogida de solicitudes",
+    title: "Cuando vuelves a estar disponible, ya sabes quién te ha contactado y qué necesita.",
   },
   {
     icon: CalendarClock,
-    title: "Citas en tu calendario",
-    detail: "El cliente puede reservar hueco directamente en tu agenda.",
+    feature: "Agenda y calendario",
+    title: "Menos llamadas y mensajes para cuadrar una visita.",
   },
   {
     icon: Phone,
-    title: "WhatsApp y contacto directo",
-    detail: "Para el cliente que prefiere escribirte directamente.",
+    feature: "WhatsApp y contacto directo",
+    title: "El cliente te contacta por el canal que ya usa.",
+  },
+  {
+    icon: Globe,
+    feature: "Web profesional",
+    title: "Quien te busca ve en segundos qué haces, dónde trabajas y cómo pedirte presupuesto.",
+  },
+  {
+    icon: Smartphone,
+    feature: "Diseño para móvil",
+    title: "Se ve y funciona bien en el móvil, que es desde donde te buscan.",
+  },
+  {
+    icon: PenLine,
+    feature: "Textos orientados a contactar",
+    title: "Cada página lleva al visitante a pedirte el servicio, no solo a mirar.",
   },
   {
     icon: Rocket,
-    title: "Lo montamos nosotros",
-    detail: "Te lo dejamos funcionando. Tú no tocas nada técnico.",
+    feature: "Configuración y puesta en marcha",
+    title: "Te lo dejamos funcionando. Tú no tocas nada técnico.",
   },
 ];
 
 export default function WhatsIncluded() {
   return (
-    <section id="que-incluye" className="bg-paper py-20 sm:py-32">
-      <Container className="flex flex-col gap-14">
+    <section id="que-incluye" className="bg-mist py-20 sm:py-32">
+      <Container className="flex flex-col gap-12 sm:gap-14">
         <SectionHeading
           eyebrow="Qué incluye"
-          title="Todo lo que necesitas, montado y funcionando."
-          description="No te damos una herramienta para que la configures tú. Te entregamos el sistema hecho."
+          title="Un sistema completo, no solo una web."
+          description="Todo esto entra en la implementación. Te lo entregamos montado y funcionando."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
-            <Reveal key={item.title} delay={(i % 4) * 90} className="h-full">
+            <Reveal key={item.feature} delay={(i % 4) * 90} className="h-full">
               <div className="group flex h-full flex-col gap-4 rounded-2xl border border-white/[0.07] bg-surface p-6 transition-colors duration-300 hover:border-accent/30 sm:p-7">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-paper transition-colors duration-300 group-hover:bg-accent/20">
-                  <item.icon
-                    className="h-5 w-5 text-ink/70 transition-colors duration-300 group-hover:text-accent-light"
-                    strokeWidth={1.75}
-                  />
-                </span>
-                <div className="flex flex-col gap-1.5">
-                  <h3 className="font-display text-[15px] font-semibold text-ink">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-ink/65">
-                    {item.detail}
-                  </p>
+                <div className="flex items-center gap-3">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent/10 transition-colors duration-300 group-hover:bg-accent/20">
+                    <item.icon className="h-5 w-5 text-accent-light" strokeWidth={1.75} />
+                  </span>
+                  <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-ink/55">
+                    {item.feature}
+                  </span>
                 </div>
+                <h3 className="font-display text-base font-semibold leading-snug text-ink">
+                  {item.title}
+                </h3>
               </div>
             </Reveal>
           ))}
         </div>
+
+        <Reveal>
+          <p className="flex flex-col gap-1 rounded-2xl border border-accent/20 bg-accent/[0.06] px-6 py-5 text-[15px] text-ink/75 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+            <span>
+              <span className="font-semibold text-ink">Implementación completa:</span>{" "}
+              web, atención automática, solicitudes, agenda y WhatsApp.
+            </span>
+            <span className="shrink-0 font-display text-lg font-bold text-ink">
+              1.000 € · pago único
+            </span>
+          </p>
+        </Reveal>
       </Container>
     </section>
   );

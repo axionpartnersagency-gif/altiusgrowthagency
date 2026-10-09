@@ -43,18 +43,19 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="text-balance font-display text-[2.6rem] font-bold leading-[1.05] tracking-[-0.02em] sm:text-5xl lg:text-[3.85rem] xl:text-[4.1rem]">
-              <span className="text-ink">Deja de perder clientes</span>{" "}
-              <span className="text-gradient">mientras estás trabajando.</span>
+            <h1 className="text-balance font-display text-[2.2rem] font-bold leading-[1.08] tracking-[-0.02em] sm:text-5xl lg:text-[3.85rem] xl:text-[4.1rem]">
+              <span className="text-ink">Mientras tú trabajas,</span>{" "}
+              <span className="text-gradient">AltiusGrowth atiende</span>{" "}
+              <span className="text-ink">a tus clientes.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={160}>
             <p className="text-balance max-w-xl text-lg leading-relaxed text-ink/70">
-              Cuando tienes las manos ocupadas no puedes coger el teléfono. Te
-              montamos una web con un asistente que atiende a quien te busca,
-              a cualquier hora, apunta qué necesita y te deja la solicitud lista
-              para cuando termines.
+              Un sistema de atención y captación para fontaneros y
+              electricistas: tu web responde a quien te busca, recoge qué
+              necesita y te deja la solicitud lista, aunque tú no puedas
+              contestar en ese momento.
             </p>
           </Reveal>
 
