@@ -16,59 +16,59 @@ const items = [
   {
     icon: Globe,
     title: "Web profesional",
-    detail: "Diseñada para tu negocio, rápida y orientada a conversión.",
+    detail: "Que dé confianza y deje claro qué haces y dónde trabajas.",
   },
   {
     icon: Smartphone,
-    title: "Diseño responsive",
-    detail: "Perfecta en el móvil, que es donde te van a encontrar.",
+    title: "Pensada para el móvil",
+    detail: "Tus clientes te buscan desde el móvil. Ahí se ve y funciona bien.",
   },
   {
     icon: PenLine,
-    title: "Copy que convierte",
-    detail: "Textos pensados para que el visitante dé el siguiente paso.",
+    title: "Textos que piden la acción",
+    detail: "Escritos para que el visitante te pida presupuesto, no solo para que mire.",
   },
   {
     icon: Bot,
-    title: "Chatbot de IA 24/7",
-    detail: "Responde preguntas frecuentes en cualquier momento del día.",
+    title: "Asistente 24/7",
+    detail: "Responde las preguntas de siempre a cualquier hora, también de noche.",
   },
   {
     icon: UserCheck,
-    title: "Recogida de datos",
-    detail: "Nombre, contacto y necesidad, listos para que tú los gestiones.",
+    title: "Datos del cliente, listos",
+    detail: "Nombre, teléfono y qué necesita. Llamas sabiendo de qué va.",
   },
   {
     icon: CalendarClock,
-    title: "Solicitud y agendamiento",
-    detail: "Integrado con tu calendario para reservar citas directamente.",
+    title: "Citas en tu calendario",
+    detail: "El cliente puede reservar hueco directamente en tu agenda.",
   },
   {
     icon: Phone,
     title: "WhatsApp y contacto directo",
-    detail: "Un canal más para el cliente que prefiere escribirte ya.",
+    detail: "Para el cliente que prefiere escribirte directamente.",
   },
   {
     icon: Rocket,
-    title: "Configuración y puesta en marcha",
-    detail: "Nos encargamos de todo hasta dejarlo funcionando.",
+    title: "Lo montamos nosotros",
+    detail: "Te lo dejamos funcionando. Tú no tocas nada técnico.",
   },
 ];
 
 export default function WhatsIncluded() {
   return (
-    <section id="que-incluye" className="bg-paper py-24 sm:py-32">
+    <section id="que-incluye" className="bg-paper py-20 sm:py-32">
       <Container className="flex flex-col gap-14">
         <SectionHeading
           eyebrow="Qué incluye"
-          title="El Sistema AltiusGrowth, completo desde el primer día."
-          description="Todo lo necesario para pasar de una web que no convierte a un sistema que capta y organiza clientes por ti."
+          title="Todo lo que necesitas, montado y funcionando."
+          description="No te damos una herramienta para que la configures tú. Te entregamos el sistema hecho."
         />
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => (
             <Reveal key={item.title} delay={(i % 4) * 90} className="h-full">
-              <div className="group flex h-full flex-col gap-4 rounded-2xl border border-white/[0.07] bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_24px_48px_-20px_rgba(79,109,245,0.35),0_0_0_1px_rgba(79,109,245,0.12)] sm:p-7">
+              <div className="group flex h-full flex-col gap-4 rounded-2xl border border-white/[0.07] bg-surface p-6 transition-colors duration-300 hover:border-accent/30 sm:p-7">
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-paper transition-colors duration-300 group-hover:bg-accent/20">
                   <item.icon
                     className="h-5 w-5 text-ink/70 transition-colors duration-300 group-hover:text-accent-light"
@@ -79,7 +79,7 @@ export default function WhatsIncluded() {
                   <h3 className="font-display text-[15px] font-semibold text-ink">
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-ink/55">
+                  <p className="text-sm leading-relaxed text-ink/65">
                     {item.detail}
                   </p>
                 </div>

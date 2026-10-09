@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 import ContactTriggerButton from "@/components/contact/ContactTriggerButton";
-import { CTA_PRIMARY, nav } from "@/lib/site-config";
+import { CTA_INFO, nav } from "@/lib/site-config";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,7 +51,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <ContactTriggerButton size="md">{CTA_PRIMARY}</ContactTriggerButton>
+          <ContactTriggerButton size="md">{CTA_INFO}</ContactTriggerButton>
         </div>
 
         <button
@@ -89,7 +89,7 @@ export default function Navbar() {
               className="mt-2 w-full"
               onClick={() => setOpen(false)}
             >
-              {CTA_PRIMARY}
+              {CTA_INFO}
             </ContactTriggerButton>
           </Container>
         </div>

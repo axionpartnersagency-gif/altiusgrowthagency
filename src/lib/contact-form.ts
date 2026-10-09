@@ -18,7 +18,8 @@ export const emptyContactForm: ContactFormData = {
   company: "",
   service: "",
   message: "",
-  contactPreference: "",
+  // Teléfono preseleccionado para ahorrar un clic; se puede cambiar a email.
+  contactPreference: "telefono",
   consent: false,
 };
 
@@ -60,9 +61,6 @@ export function validateContactForm(data: ContactFormData): ContactFormErrors {
     errors.service = "Selecciona qué servicio necesitas.";
   }
 
-  if (!data.message.trim()) {
-    errors.message = "Cuéntanos brevemente qué necesitas.";
-  }
 
   if (!data.contactPreference) {
     errors.contactPreference = "Indica tu preferencia de contacto.";

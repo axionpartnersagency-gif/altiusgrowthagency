@@ -14,8 +14,8 @@ type ContactTriggerButtonProps = {
 
 /**
  * Mismo aspecto visual que el <Button> normal, pero en lugar de navegar,
- * abre el modal de contacto. Sustituye a los botones "Quiero conseguir
- * más clientes" que antes enlazaban a #precio o a WhatsApp.
+ * abre el modal de contacto. Sustituye a los botones de contacto
+ * que antes enlazaban a #precio o a WhatsApp.
  */
 export default function ContactTriggerButton({
   children,

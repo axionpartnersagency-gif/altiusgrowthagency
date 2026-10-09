@@ -25,17 +25,19 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "AltiusGrowth — Webs con IA para fontaneros y electricistas",
+    default: "Web para fontaneros y electricistas · AltiusGrowth",
     template: "%s · AltiusGrowth",
   },
   description:
-    "AltiusGrowth crea páginas web profesionales con un chatbot de IA que atiende a tus clientes, responde sus dudas y te consigue más solicitudes de servicio, incluso mientras trabajas.",
+    "Webs para fontaneros y electricistas que atienden a tus clientes 24/7 y recogen sus solicitudes mientras tú trabajas. Precio cerrado: 1.000 € + 50 €/mes.",
   keywords: [
     "web para fontaneros",
     "web para electricistas",
-    "chatbot IA para empresas de servicios",
-    "captación de clientes fontanería",
-    "agencia web fontanería y electricidad",
+    "página web fontanería",
+    "página web electricista autónomo",
+    "conseguir clientes fontanería",
+    "atender llamadas mientras trabajo",
+    "asistente 24/7 para fontaneros",
   ],
   authors: [{ name: "AltiusGrowth" }],
   alternates: {
@@ -46,15 +48,15 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: siteConfig.url,
     siteName: "AltiusGrowth",
-    title: "AltiusGrowth — Mientras tú trabajas, AltiusGrowth atiende a tus clientes",
+    title: "Deja de perder clientes mientras estás trabajando · AltiusGrowth",
     description:
-      "Webs profesionales con chatbot de IA para fontaneros y electricistas. Más solicitudes de servicio, sin depender de estar siempre al teléfono.",
+      "Webs para fontaneros y electricistas que atienden a tus clientes a cualquier hora y te dejan la solicitud lista para cuando termines.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AltiusGrowth — Mientras tú trabajas, AltiusGrowth atiende a tus clientes",
+    title: "Deja de perder clientes mientras estás trabajando · AltiusGrowth",
     description:
-      "Webs profesionales con chatbot de IA para fontaneros y electricistas.",
+      "Webs para fontaneros y electricistas que atienden a tus clientes a cualquier hora.",
   },
   robots: {
     index: true,

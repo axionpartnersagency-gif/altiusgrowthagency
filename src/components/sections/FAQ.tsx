@@ -5,35 +5,40 @@ import { ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
+import { siteConfig } from "@/lib/site-config";
 
 const faqs = [
   {
+    q: "¿Funciona mientras estoy trabajando?",
+    a: "Sí, para eso está. El asistente atiende a quien entra en tu web a cualquier hora: cuando estás en una obra, conduciendo o fuera de horario. Tú revisas las solicitudes cuando terminas.",
+  },
+  {
+    q: "¿Necesito saber de tecnología?",
+    a: "No. Lo montamos y configuramos nosotros. Tú solo nos cuentas cómo trabajas.",
+  },
+  {
     q: "¿Necesito cambiar mi web actual?",
-    a: "No necesariamente. Podemos partir de cero con una web nueva orientada a conversión, o valorar tu web actual y añadir el chatbot y el sistema de solicitud si la estructura lo permite.",
+    a: "No necesariamente. Podemos hacerte una web nueva o valorar la que ya tienes y añadirle el asistente y el sistema de solicitudes, si su estructura lo permite.",
   },
   {
-    q: "¿El chatbot funciona cuando estoy trabajando?",
-    a: "Sí. El chatbot atiende a tus visitantes las 24 horas, también cuando estás en una obra, de camino a un servicio o fuera de horario.",
+    q: "¿Mis clientes pueden escribirme por WhatsApp?",
+    a: "Sí. Añadimos un botón de WhatsApp para el cliente que prefiere escribirte directamente en lugar de usar el asistente.",
   },
   {
-    q: "¿Puede conectarse con WhatsApp?",
-    a: "Sí, añadimos un botón de contacto directo por WhatsApp para los clientes que prefieren escribirte ahí en lugar de usar el chatbot.",
+    q: "¿Puedo cambiar lo que responde el asistente?",
+    a: "Sí. Lo configuramos con las preguntas y respuestas de tu negocio, y lo ajustamos cuando lo necesites dentro del mantenimiento.",
   },
   {
-    q: "¿Puedo modificar las preguntas que responde?",
-    a: "Sí. Configuramos el chatbot con las preguntas y respuestas propias de tu negocio, y podemos ajustarlas cuando lo necesites como parte del mantenimiento.",
+    q: "¿Qué tengo que aportar para empezar?",
+    a: "Poco: tus servicios, zona de trabajo, horarios y, si tienes, fotos o logo. Del resto nos encargamos nosotros.",
   },
   {
-    q: "¿Qué necesito aportar para empezar?",
-    a: "Poco: información básica de tu negocio (servicios, zona de cobertura, horarios) y, si tienes, fotos o logo. Nosotros nos encargamos del resto del proceso.",
+    q: "¿Qué incluye cada pago?",
+    a: "Los 1.000 € (pago único) cubren el diseño, el montaje y la puesta en marcha. Los 50 €/mes cubren alojamiento, soporte y supervisión del sistema.",
   },
   {
-    q: "¿El precio incluye el mantenimiento?",
-    a: "La implementación (1.000 €) cubre el diseño, desarrollo y puesta en marcha. La cuota de 50 €/mes cubre alojamiento, soporte y supervisión del sistema.",
-  },
-  {
-    q: "¿Cuánto se tarda en tener la web funcionando?",
-    a: "El plazo depende de la complejidad de tu negocio y de lo rápido que nos facilites la información inicial. Te lo concretamos antes de empezar, sin sorpresas.",
+    q: "¿Cuánto se tarda en tenerlo funcionando?",
+    a: "Depende de tu negocio y de lo rápido que nos pases la información. Te damos el plazo antes de empezar, sin sorpresas.",
   },
 ];
 
@@ -41,12 +46,25 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-paper py-24 sm:py-32">
+    <section id="faq" className="bg-mist py-20 sm:py-32">
       <Container className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <SectionHeading
           eyebrow="Preguntas frecuentes"
           title="Lo que suelen preguntarnos fontaneros y electricistas."
-          description="Si tienes otra duda, escríbenos y te respondemos directamente."
+          description={
+            <>
+              ¿Tienes otra duda?{" "}
+              <a
+                href={siteConfig.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-accent-light underline underline-offset-4 hover:text-ink"
+              >
+                Escríbenos por WhatsApp
+              </a>{" "}
+              y te respondemos directamente.
+            </>
+          }
         />
 
         <div className="flex flex-col divide-y divide-white/[0.08] border-t border-white/[0.08]">
@@ -76,7 +94,7 @@ export default function FAQ() {
                     }`}
                   >
                     <div className="min-h-0">
-                      <p className="pb-5 pr-8 text-[15px] leading-relaxed text-ink/60">
+                      <p className="pb-5 pr-8 text-[15px] leading-relaxed text-ink/70">
                         {item.a}
                       </p>
                     </div>

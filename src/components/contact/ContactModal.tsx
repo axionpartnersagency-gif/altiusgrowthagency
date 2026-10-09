@@ -16,7 +16,7 @@ import {
 // text-base (16px), no menor: en iOS Safari un input con font-size < 16px hace
 // zoom automático de toda la página al enfocarlo.
 const fieldClass =
-  "w-full rounded-xl border bg-paper px-4 py-3 text-base text-ink placeholder:text-ink/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/40";
+  "w-full rounded-xl border bg-paper px-4 py-3 text-base text-ink placeholder:text-ink/45 transition-colors focus:outline-none focus:ring-2 focus:ring-accent/40";
 
 function fieldBorder(hasError: boolean) {
   return hasError ? "border-red-400 focus:border-red-400" : "border-white/10 focus:border-accent";
@@ -144,10 +144,10 @@ export default function ContactModal() {
                 id="contact-modal-title"
                 className="font-display text-2xl font-bold tracking-tight text-ink"
               >
-                Cuéntanos qué necesitas
+                Cuéntanos cómo trabajas
               </h2>
               <p className="mt-1.5 text-[15px] text-ink/60">
-                Rellena el formulario y te contactamos lo antes posible.
+                Te contactamos para explicarte, sin compromiso, cómo quedaría en tu negocio.
               </p>
 
               <form onSubmit={handleSubmit} noValidate className="mt-6 flex flex-col gap-4">
@@ -215,7 +215,7 @@ export default function ContactModal() {
 
                 <div>
                   <label htmlFor="cf-service" className="mb-1.5 block text-sm font-semibold text-ink">
-                    ¿Qué servicio necesitas?
+                    ¿En qué podemos ayudarte?
                   </label>
                   <select
                     id="cf-service"
@@ -237,11 +237,12 @@ export default function ContactModal() {
 
                 <div>
                   <label htmlFor="cf-message" className="mb-1.5 block text-sm font-semibold text-ink">
-                    Cuéntame brevemente qué necesitas
+                    ¿Algo que quieras contarnos? <span className="font-normal text-ink/40">(opcional)</span>
                   </label>
                   <textarea
                     id="cf-message"
                     rows={3}
+                    placeholder="Ej.: soy fontanero en Valencia y no llego a coger todas las llamadas"
                     value={data.message}
                     onChange={(e) => update("message", e.target.value)}
                     className={`${fieldClass} ${fieldBorder(!!errors.message)} resize-none`}
@@ -284,8 +285,17 @@ export default function ContactModal() {
                       onChange={(e) => update("consent", e.target.checked)}
                       className="mt-0.5 h-4 w-4 shrink-0 accent-accent"
                     />
-                    Acepto que mis datos sean utilizados para que puedan
-                    ponerse en contacto conmigo en relación con mi solicitud.
+                    <span>
+                      Acepto que mis datos sean utilizados para que puedan
+                      ponerse en contacto conmigo en relación con mi solicitud.{" "}
+                      <a
+                        href="/politica-privacidad"
+                        target="_blank"
+                        className="text-accent-light underline underline-offset-2 hover:text-ink"
+                      >
+                        Política de privacidad
+                      </a>
+                    </span>
                   </label>
                   {errors.consent && <p className="mt-1 text-xs text-red-400">{errors.consent}</p>}
                 </div>

@@ -57,7 +57,7 @@ export default async function Image() {
             maxWidth: 900,
           }}
         >
-          Mientras tú trabajas, AltiusGrowth atiende a tus clientes.
+          Deja de perder clientes mientras estás trabajando.
         </div>
 
         <div
@@ -69,7 +69,7 @@ export default async function Image() {
             maxWidth: 780,
           }}
         >
-          Webs con chatbot de IA para fontaneros y electricistas.
+          Webs para fontaneros y electricistas que atienden a tus clientes a cualquier hora.
         </div>
       </div>
     ),

@@ -1,7 +1,7 @@
 // Datos de contacto y enlaces reales de la agencia.
 export const siteConfig = {
   name: "AltiusGrowth",
-  tagline: "Mientras tú trabajas, AltiusGrowth atiende a tus clientes.",
+  tagline: "Deja de perder clientes mientras estás trabajando.",
   url: "https://altiusgrowth.es",
   email: "altiusgrowthagency@gmail.com",
   whatsapp: "34689593756",
@@ -22,5 +22,9 @@ export const nav = [
   { label: "FAQ", href: "#faq" },
 ];
 
-export const CTA_PRIMARY = "Quiero conseguir más clientes";
+// Cada CTA acompaña un momento distinto de la página: no todos dicen lo mismo.
+export const CTA_PRIMARY = "Quiero dejar de perder solicitudes";
 export const CTA_SECONDARY = "Ver cómo funciona";
+export const CTA_INFO = "Solicitar información";
+export const CTA_DEMO = "Quiero verlo funcionando";
+export const CTA_TALK = "Hablar con AltiusGrowth";

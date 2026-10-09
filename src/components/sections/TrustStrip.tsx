@@ -5,15 +5,15 @@ import Reveal from "@/components/ui/Reveal";
 const points = [
   {
     icon: Wrench,
-    text: "Hecho solo para fontanería y electricidad",
+    text: "Solo para fontanería y electricidad",
   },
   {
     icon: PackageCheck,
-    text: "Todo incluido: web, chatbot y puesta en marcha",
+    text: "Web, asistente y puesta en marcha incluidos",
   },
   {
     icon: ShieldCheck,
-    text: "Sin conocimientos técnicos necesarios",
+    text: "No necesitas saber de tecnología",
   },
   {
     icon: BadgeEuro,
@@ -30,7 +30,7 @@ export default function TrustStrip() {
             {points.map((point) => (
               <li
                 key={point.text}
-                className="flex items-center gap-2.5 text-sm text-ink/60"
+                className="flex items-center gap-2.5 text-sm text-ink/70"
               >
                 <point.icon className="h-4 w-4 shrink-0 text-accent-light" strokeWidth={1.75} />
                 {point.text}

@@ -13,8 +13,8 @@ export default function Footer() {
               <Logo />
             </div>
             <p className="text-sm leading-relaxed text-ink/55">
-              Webs con IA para fontaneros y electricistas. Diseñamos el
-              sistema que trabaja mientras tú estás en obra.
+              Webs para fontaneros y electricistas que atienden a tus
+              clientes mientras tú estás en una obra.
             </p>
           </div>
 
